@@ -1,0 +1,132 @@
+* {
+    font-family: 'Baloo Da 2', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    border: 1.5px solid #e3e3e3;
+    margin-top: 5px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse:separate;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-spacing: 0;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #e3e3e3;
+}
+
+
+th, td {
+    padding: 8px 15px;
+    border: .5px solid #e3e3e3;
+}
+
+td:not(:first-child) {
+    text-align: center;
+}
+
+table th:first-child {
+    border-radius:5px 0 0 0;
+  }
+  table th:last-child {
+     border-radius: 0 5px 0 0;
+  }
+  table tr:last-child td:first-child {
+     border-radius: 0 0 0 5px;
+  }
+  table tr:last-child td:last-child {
+     border-radius: 0 0 5px 0;
+  }
+
+
+.head {
+    text-align: left;
+}
+
+.form {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.form-field {
+    margin-top: 16px;
+}
+
+.form-field:not(:last-child) {
+    margin-right:10px;
+}
+
+.input {
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    height: 2.5rem;
+    border-radius: 1.5px;
+    background-color: #e3e3e3;
+    padding: 0 15px;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 1px solid #007cb9;
+}
+
+.btn {
+    width: 12rem;
+    height: 2.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #007cb9;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 1.5px;
+    padding: 3px 0;
+
+}
+
+.btn:hover {
+    background-color: #757882;
+}
+
+.dropdown {
+    width: 13.5rem;
+    height: 2.5rem;
+    background-color: #e3e3e3;
+    cursor: pointer;
+    border: none;
+    border-radius: 1.5px;
+    font-size: 1.1rem;
+    color: #757882;
+}
+
+
+.fa-circle-xmark {
+    font-size: 1rem;
+    color: red;
+
+}
+
+.fa-circle-check {
+    font-size: 1rem;
+    color: rgb(23, 185, 23);
+}
