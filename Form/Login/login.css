@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Da 2', cursive;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+.header p {
+    font-size: 15px;
+    padding-top: 2px;
+    color: #a19d9d;
+}
+
+.box {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 400px;
+}
+
+.main-form {
+   
+}
+
+.input-field {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0;
+    height: 30px;
+    padding: 10px 5px;
+    
+    border: none;
+    background-color: #f9f9fc;
+    border-bottom: 1px solid #007cb9;
+    color: #232425;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #007cb9;
+    
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+}
+
+.cta .login-btn {
+    width: 20%;
+    height: 30px;
+    background-color: #007cb9;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.login-btn:hover{
+    cursor: pointer;
+}
+.login-link:hover{
+    cursor: pointer;
+}
+
+.cta .login {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.label {
+    font-size: 13px;
+    color: #6f747c;
+}
+.image-side{
+    overflow: hidden;
+    width: 50vw; 
+    height: 100vh;
+}
+.image-side img {
+   height: 100%;
+    background-size: cover;
+    object-fit: cover;
+   
+}
