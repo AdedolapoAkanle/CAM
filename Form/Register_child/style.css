@@ -22,16 +22,11 @@ body {
     align-items: center;
     height: 10%;
     background-color: #ffffff;
-
-
 }
 
 .navbar ul {
     display: flex;
-
-    font-size: 10px;
-
-
+    /* font-size: 10px; */
 }
 
 .navbar ul li {
