@@ -6,23 +6,100 @@
     
 }
 
-body {
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: #ffffff;
+
+
 }
 
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar ul li {
+    display: flex;
+    text-align: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+.navbar ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.navbar ul .logout-btn {
+    background: none;
+    border: none;
+
+
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+}
+
+.navbar ul .logout-btn .switch-icon {
+    padding: 5px;
+}
+
+
+.navbar ul .logout-btn:hover {
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
+.navbar ul .v-line {
+    border: 1px solid #e4e3e3;
+}
+
+.logo {
+    width: 150px;
+    /* padding-top: 1%; */
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(65deg,#DFCE38, #3094C6 55%);
+}
+
+h1 {
+    font-size: 25px;
+    color: #313131;
+}
+
+h3 {
+    font-size: 15px;
+    color: #313131;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 .container {
     border: 1.5px solid #e3e3e3;
     margin-top: 5px;
     padding: 10px 20px 20px 20px;
     border-radius: 10px;
+
+    background-color: rgb(255, 255, 255, .3);
+    backdrop-filter: blur(5px);
+    outline: 1px solid #fff;
 }
 
 table {
     width: 100%;
     border-collapse:separate;
     margin-top: 30px;
-    border-radius: 5px;
     border-spacing: 0;
     
 }
@@ -35,6 +112,7 @@ tr:nth-child(even) {
 th, td {
     padding: 8px 15px;
     border: .5px solid #e3e3e3;
+    color: #313131;
 }
 
 td:not(:first-child) {
@@ -43,16 +121,16 @@ td:not(:first-child) {
 
 table th:first-child {
     border-radius:5px 0 0 0;
-  }
-  table th:last-child {
+}
+table th:last-child {
      border-radius: 0 5px 0 0;
-  }
-  table tr:last-child td:first-child {
+}
+table tr:last-child td:first-child {
      border-radius: 0 0 0 5px;
-  }
-  table tr:last-child td:last-child {
+}
+table tr:last-child td:last-child {
      border-radius: 0 0 5px 0;
-  }
+}
 
 
 .head {
@@ -87,7 +165,7 @@ table th:first-child {
 
 .input:focus {
     outline: none;
-    border-bottom: 1px solid #007cb9;
+    border-bottom: 2px solid #007cb9;
 }
 
 .btn {
@@ -117,6 +195,10 @@ table th:first-child {
     border-radius: 1.5px;
     font-size: 1.1rem;
     color: #757882;
+}
+
+.dropdown:focus {
+    outline: none;
 }
 
 

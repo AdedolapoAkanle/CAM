@@ -7,39 +7,61 @@
 }
 
 body {
+    height: 100vh;
+    background-image: linear-gradient(65deg,#DFCE38, #3094C6 55%);
+}
+
+.section {
     display: flex;
     justify-content: center;
 }
 
 .container {
     border: 1.5px solid #e3e3e3;
-    margin-top: 40px;
-    padding: 10px 20px 20px 20px;
+    margin: 20px 0;
+    padding: 10px 20px 10px 20px;
     border-radius: 10px;
 
+    background-color: rgb(255, 255, 255, .3);
+    backdrop-filter: blur(5px);
+    outline: 1px solid #fff;
+
     /* background-color: red; */
+
+    
 }
 
+h1 {
+    font-size: 25px;
+    color: #313131;
+}
 
 table {
     width: 100%;
-    border-collapse:separate;
-    border-spacing: 0;
-    margin-top: 40px;
+    border-collapse:collapse;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 1px #e3e3e3; 
 }
 
 tr:nth-child(even) {
     background-color: #e3e3e3;
 }
 
+
 td:not(:first-child) {
     text-align: left;
 }
 
-
 th, td {
-    padding: 8px 35px;
-    /* border:1px solid yellowgreen; */
+    padding: 8px 32px;
+    color: #313131;
+}
+
+
+td {
+    border: hidden;
 }
 
 .head {
@@ -89,116 +111,112 @@ th, td {
     border-bottom: 2px solid #007cb9;
 }
 
-/* .check {
-   width: 40px;
-   height: 16px;
-   opacity: 0;
-} */
-
-/* .checkbox:checked {
-    accent-color: green;
-} */ 
-  [type = "checkbox"] {
-     opacity: 0; 
-     /* width: 40px;
-     height: 16px;
-     cursor: pointer; */
- }
-
- [type = "checkbox"] + label {
-     /* position: relative;
-     padding-left: 30px;
-     cursor: pointer;
-     display: inline-block;
-     color: #007cb9;
-     line-height: 25px; */
-     position: relative;
-     top: 5%;
-     left: -50%;
-     margin-bottom: 13px;
-     margin-left: 9px;
-     cursor: pointer;
-     display: inline-block;
-     color: #007cb9;
- }
-
- [type = "checkbox"] + label::before {
-     /* content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 18px;
-     height: 18px;
-     outline: 2px solid #fff;
-     background: #e3e3e3; */
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 10%;
-     padding: 7px 7px;
-     outline: 2px solid #fff;
-     background: #e3e3e3;
-     border-radius: 2px;
- }
-
- [type = "checkbox"]:checked + label::before {
-    /* content: "";
-    position: absolute;
-    left: 0;
+input[type="checkbox"] {
+    position: relative;
     top: 0;
-    width: 18px;
-    height: 18px;
-    outline: 2px solid #91bd3a;
-    background: #e3e3e3; */
-
-    content: "";
-    position: absolute;
-    padding: 7px 7px;
-    outline: 2px solid #91bd3a;
-    background: #e3e3e3;
-}
-
-[type = "checkbox"]:checked + label::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    background-image: url(check.jpg);
-    background-size: contain;
-}
-
-/* input[type="checkbox"] {
+    left: 30%;
     appearance: none;
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 20px;
     background-color: #f2f9f1;
     border-radius: 2px;
     cursor: pointer;
 
+    outline: #91bd3a;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 input[type="checkbox"]:after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 300;
-    font-size: 20px;
-    content: "\f00c";
+    position: relative;
+    right: 10%;
+    bottom: 10%;
+    font-weight: 200;
+    font-size: 30px;
+    content: "\2714";
     color: #91bd3a;
     display: none;
+    
 }
 
 input[type="checkbox"]:hover {
     background-color: #f6f6f6;
+    border: 1px solid #91bd3a;
+
+
 }
 
 input[type="checkbox"]:checked{
     border: #91bd3a;
+    border: 2px solid #91bd3a;
+
+
 }
 
 input[type="checkbox"]:checked::after {
     display: block;
-} */
+    border-radius: 2px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: #ffffff;
+
+
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar ul li {
+    display: flex;
+    text-align: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+.navbar ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.navbar ul .logout-btn {
+    background: none;
+    border: none;
+
+
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: all .3s;
+}
+
+.navbar ul .logout-btn .switch-icon {
+    padding: 5px;
+}
+
+
+.navbar ul .logout-btn:hover {
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
+.navbar ul .v-line {
+    border: 1px solid #e4e3e3;
+}
+
+.logo {
+    width: 150px;
+    /* padding-top: 1%; */
+}

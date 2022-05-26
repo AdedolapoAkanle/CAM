@@ -10,10 +10,10 @@
 		/>
 
 		<title>Register</title>
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-		/>
+		/> -->
 
 		<script
 			src="https://kit.fontawesome.com/21df5b0468.js"
@@ -21,93 +21,137 @@
 		></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Mark Attendance</h1>
+		<nav class="navbar">
+			<img src="IMG/GH_logo.png" class="logo" alt="" />
+			<ul>
+				<li class="nav_link"><a href="#">Report</a></li>
+				<li class="nav_link"><a href="#">Register parent</a></li>
+				<li class="nav_link"><a href="#">Register child</a></li>
+				<li class="nav_link"></li>
+				<hr class="v-line" />
 
-			<form action="#" class="form">
-				<input type="text" placeholder="Search" class="input form-field" />
-			</form>
-			<table>
-				<tr>
-					<th class="head">Names</th>
-					<th>Checkbox</th>
-					<th>Tally</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>James Smith</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Mary Mark</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"> </label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Richard Miles</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
+				<button class="logout-btn">
+					<img
+						src="IMG/SVG/switch.svg"
+						class="switch-icon"
+						alt="switch-icon"
+						height="30px"
+					/>
+				</button>
+			</ul>
+		</nav>
+		<div class="section">
+			<div class="container">
+				<h1>Mark Attendance</h1>
 
-				<tr>
-					<td>Sam Smith</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Rita Sand</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Paula Park</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Nick West</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-				<tr>
-					<td>Peter Orlando</td>
-					<td>
-						<input type="checkbox" class="check" />
-						<label for="check"></label>
-					</td>
-					<td><input type="text" class="tally" placeholder="Enter tally" /></td>
-					<td><i class="fa-regular fa-circle-check"></i></td>
-				</tr>
-			</table>
+				<form action="#" class="form">
+					<input type="text" placeholder="Search" class="input form-field" />
+				</form>
+				<table>
+					<tr>
+						<th class="head">Names</th>
+						<th>Checkbox</th>
+						<th>Tally</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>James Smith</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Mary Mark</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"> </label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Richard Miles</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+
+					<tr>
+						<td>Sam Smith</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Rita Sand</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Paula Park</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Nick West</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+					<tr>
+						<td>Peter Orlando</td>
+						<td>
+							<input type="checkbox" class="check" />
+							<label for="check"></label>
+						</td>
+						<td>
+							<input type="text" class="tally" placeholder="Enter tally" />
+						</td>
+						<td><i class="fa-regular fa-circle-check"></i></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>
+
+<!-- input[type="checkbox"] { display: none; margin: 4px; } input[type="checkbox"] +
+label::before { content: "\2714"; border: 1px solid #91bd3a; border-radius: 2px;
+display: inline-block; width: 15px; height: 15px; padding-left: 4px;
+padding-bottom: 5px; margin-right: 4px; /* color: transparent; */ transition:
+.2s; } input[type ="checkbox"]:checked + label::before { background-color: red;
+color: #fff; } -->
