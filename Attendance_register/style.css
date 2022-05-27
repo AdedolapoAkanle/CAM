@@ -12,35 +12,34 @@ body {
 }
 
 .section {
-    height: 90%;
     display: flex;
     justify-content: center;
+    height: 90%;
 }
 
 .container {
     border: 1.5px solid #e3e3e3;
-    margin: 20px 0;
-    padding: 10px 20px 10px 20px;
+    margin: 8px 0;
+    padding: 10px 20px;
     border-radius: 10px;
 
     background-color: rgb(255, 255, 255, .3);
     backdrop-filter: blur(5px);
     outline: 1px solid #fff;
 
-    /* background-color: red; */
 
     
 }
 
 h1 {
-    font-size: 25px;
+    font-size: 22px;
     color: #313131;
 }
 
 table {
     width: 100%;
     border-collapse:collapse;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 5px;
     border-style: hidden; 
     box-shadow: 0 0 0 1px #e3e3e3; 
