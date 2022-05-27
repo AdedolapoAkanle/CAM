@@ -87,8 +87,7 @@ h3 {
 }
 .container {
     border: 1.5px solid #e3e3e3;
-    margin-top: 5px;
-    padding: 10px 20px 20px 20px;
+    padding: 20px;
     border-radius: 10px;
 
     background-color: rgb(255, 255, 255, .3);

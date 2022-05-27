@@ -12,6 +12,7 @@ body {
 }
 
 .section {
+    height: 90%;
     display: flex;
     justify-content: center;
 }
@@ -219,4 +220,13 @@ input[type="checkbox"]:checked::after {
 .logo {
     width: 150px;
     /* padding-top: 1%; */
+}
+
+#btn {
+    border: none;
+    background: none;
+}
+#btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
