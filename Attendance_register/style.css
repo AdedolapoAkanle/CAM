@@ -8,7 +8,8 @@
 
 body {
     height: 100vh;
-    background-image: linear-gradient(65deg,#DFCE38, #3094C6 55%);
+    /* background-image: linear-gradient(65deg,#DFCE38, #3094C6 55%); */
+    background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 }
 
 .section {
