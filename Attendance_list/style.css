@@ -85,7 +85,9 @@ h3 {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+
 }
+
 .container {
     border: 1.5px solid #e3e3e3;
     padding: 20px;
@@ -138,29 +140,19 @@ table tr:last-child td:last-child {
 }
 
 .form {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin-top: 10px;
 }
 
-.form-field {
-    margin-top: 16px;
-}
-
-.form-field:not(:last-child) {
-    margin-right:10px;
-}
-
-.input {
-    font-size: 1.1rem;
-    cursor: pointer;
+.input{
+    padding: 9px 18px;
+    font-size: 16px;
     border: none;
-    height: 2.5rem;
-    border-radius: 1.5px;
+    border-radius: 1px;
     background-color: #e3e3e3;
-    padding: 0 15px;
+    color: #484d51;
 }
 
 .input:focus {
@@ -169,21 +161,20 @@ table tr:last-child td:last-child {
 }
 
 .btn {
-    width: 12rem;
-    height: 2.5rem;
+    padding: 10px 15px;
     text-transform: uppercase;
     color: #fff;
     background-color: #007cb9;
-    font-size: 1.1rem;
+    font-size: 16px;
     cursor: pointer;
     border: none;
-    border-radius: 1.5px;
-    padding: 3px 0;
+    border-radius: 2px;
+    text-align: center;
 
 }
 
 .btn:hover {
-    background-color: #757882;
+    background-color: #005792;
 }
 
 .dropdown {

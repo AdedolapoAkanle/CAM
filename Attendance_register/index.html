@@ -44,141 +44,167 @@
 			<div class="container">
 				<h1>Mark Attendance</h1>
 
-				<form action="#" class="form">
-					<input type="text" placeholder="Search" class="input form-field" />
-				</form>
-				<table>
-					<tr>
-						<th class="head">Names</th>
-						<th>Mark</th>
-						<th>Tally</th>
-						<th></th>
-					</tr>
-					<tr>
-						<td>James Smith</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Mary Mark</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"> </label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Richard Miles</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
+				<form action="#">
+					<div class="form">
+						<input
+							name="name"
+							type="text"
+							placeholder="Search"
+							class="input form-field"
+						/>
+					</div>
 
-					<tr>
-						<td>Sam Smith</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Rita Sand</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Paula Park</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Nick West</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-					<tr>
-						<td>Peter Orlando</td>
-						<td id="btn">
-							<input type="checkbox" class="check" />
-							<label for="check"></label>
-						</td>
-						<td>
-							<input type="text" class="tally" placeholder="Enter tally" />
-						</td>
-						<td>
-							<button id="btn">
-								<i class="fa-regular fa-circle-check"></i>
-							</button>
-						</td>
-					</tr>
-				</table>
+					<table>
+						<tr>
+							<th class="head">Names</th>
+							<th>Mark</th>
+							<th>Tally</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td>James Smith</td>
+							<td id="btn">
+								<input
+									name="checkbox"
+									value="james smith"
+									type="checkbox"
+									class="check"
+								/>
+								<label for="check"></label>
+							</td>
+							<td>
+								<input
+									name="tally"
+									type="text"
+									class="tally"
+									value="Enter tally"
+								/>
+							</td>
+							<td>
+								<button id="btn" name="submit" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<!-- <tr>
+							<td>Mary Mark</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"> </label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="submit" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Richard Miles</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Sam Smith</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Rita Sand</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Paula Park</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Nick West</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Peter Orlando</td>
+							<td id="btn">
+								<input name="checkbox" type="checkbox" class="check" />
+								<label for="check"></label>
+							</td>
+							<td>
+								<input type="text" class="tally" placeholder="Enter tally" />
+							</td>
+							<td>
+								<button id="btn" name="check" type="submit">
+									<i class="fa-regular fa-circle-check"></i>
+								</button>
+							</td>
+						</tr> -->
+					</table>
+				</form>
 			</div>
 		</div>
 
-		<script src="script.js"></script>
+		<script>
+			function click() {
+				let check = document.querySelector(".check");
+				check.addEventListener("click", () => {
+					alert(check.value);
+				});
+			}
+			click();
+		</script>
 	</body>
 </html>

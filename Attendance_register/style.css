@@ -105,11 +105,17 @@ td {
     background-color: transparent;
     padding: 8px 0;
     text-align: center;
+    color: #484d51;
+
 }
 
 .tally:focus {
     outline: none;
     border-bottom: 2px solid #007cb9;
+}
+
+.tally:hover {
+    background-color: #eee;
 }
 
 input[type="checkbox"] {
@@ -226,7 +232,4 @@ input[type="checkbox"]:checked::after {
     border: none;
     background: none;
 }
-#btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+
