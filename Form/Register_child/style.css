@@ -12,7 +12,8 @@ body {
     background-size: cover;
     background-position: center;
     /* background-color: #fae7ef; */
-    background-image: linear-gradient(65deg,#DFCE38, #3094C6 55%);
+    /* background-image: linear-gradient(180deg,#3094C6,#23476E 45%); */
+    background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
     height: 100vh;
 }
 

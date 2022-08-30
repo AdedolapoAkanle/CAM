@@ -115,3 +115,8 @@ input:focus {
     object-fit: cover;
    
 }
+.error_msg{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
