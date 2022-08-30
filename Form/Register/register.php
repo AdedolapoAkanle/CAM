@@ -1,3 +1,7 @@
+<?php
+if (isset($_GET['msg']))
+	$msg =  $_GET['msg'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +10,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="register.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
-		integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
-		integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
 
 
@@ -34,15 +34,30 @@
 <body>
 	<div class="Container">
 		<div class="box">
-			<form method='post' id="myform">
+			<form method='post' action="../Model/Backend/backend.php">
 				<div class="header">
+
 					<h1>Register</h1>
 					<p>Access to our dashboard</p>
 				</div>
+				<span class="error_msg">
+					<?php
+
+					if (isset($_GET['msg'])) {
+						echo $msg;
+					}
+
+					?>
+				</span>
 				<div class="main-form">
+					
 					<div class="input-field">
-						<label class="label">Name</label>
-						<input type="text" placeholder="Enter name" name="name" />
+						<label class="label">First Name</label>
+						<input type="text" placeholder="Enter first name" name="first_name" />
+					</div>
+					<div class="input-field">
+						<label class="label">Surname</label>
+						<input type="text" placeholder="Enter surname" name="surname" />
 					</div>
 					<div class="input-field">
 						<label class="label">Email</label>
