@@ -9,9 +9,9 @@ class ParentRegister extends Database
 
     public $parentTable = "register_parent";
 
-    public function parentInfo($condition = "", $fields = "*", $column = "")
+    public function parentInfo($condition = "", $field = "*", $column = "")
     {
-        $this->lookUp($this->parentTable, $fields, $condition, $column);
+        $this->lookUp($this->parentTable, $field, $condition, $column);
     }
 
     public function countParentRow($condition)
