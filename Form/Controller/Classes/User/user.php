@@ -5,7 +5,7 @@ class User extends Database
     public $name;
     public $email;
     public $password;
-    public $table = "user";
+    public $table = "users";
     public $result;
 
     public function userInfo($condition = "", $field = "*", $column = "")
@@ -38,6 +38,9 @@ class User extends Database
 
     public function validateUser()
     {
+        // $specialChars = preg_match('@[^\w]@', $this->password);
+
+
         if (Fun::checkEmptyInput([$this->name, $this->email, $this->password])) {
             Fun::redirect("../../View/User/signup.php", "msg", "None of the fields must be empty!");
             exit;
@@ -58,17 +61,22 @@ class User extends Database
             exit;
         }
 
-        // if(!preg_match("#[0-9]+#",$this->password)) {
-        //     Fun::redirect("", "msg", "Your Password Must Contain At Least 1 Number!");
-        // }
+        if (!preg_match('@[A-Z]@', $this->password)) {
+            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least 1 Capital Letter!");
+            exit;
+        }
 
-        // if(!preg_match("#[A-Z]+#",$password)) {
-        //     Fun::redirect("", "msg", "Your Password Must Contain At Least 1 Capital Letter!");
-        // } 
+        if (!preg_match('@[a-z]@', $this->password)) {
+            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least 1 Lowercase Letter!");
+            exit;
+        }
 
-        // if(!preg_match("#[a-z]+#",$password)) {
-        //     $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
-        // }
+        if (!preg_match('@[0-9]@', $this->password)) {
+            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least A Number!");
+            exit;
+        }
+
+
         Fun::redirect("../../View/User/signup.php", "msg", "Saved Successfully!");
     }
 
@@ -76,7 +84,7 @@ class User extends Database
     {
         $this->name = $this->escape($name);
         $this->email = $this->escape($email);
-        $this->password = $this->escape(($password));
+        $this->password = $password;
 
         $this->validateUser();
         $this->saveUser();
@@ -84,7 +92,7 @@ class User extends Database
 
     public function saveUser()
     {
-
-        $this->save($this->table, "name = '$this->name', email = '$this->email', password = '$this->password'");
+        $pwd = sha1($this->password);
+        $this->save($this->table, "name = '$this->name', email = '$this->email', password = '$pwd'");
     }
 }
