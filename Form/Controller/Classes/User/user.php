@@ -5,7 +5,7 @@ class User extends Database
     public $name;
     public $email;
     public $password;
-    public $table = "signup";
+    public $table = "user";
     public $result;
 
     public function userInfo($condition = "", $field = "*", $column = "")
