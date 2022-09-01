@@ -120,3 +120,8 @@ input:focus {
     justify-content: center;
     color: red;
 }
+.success_msg{
+    display: flex;
+    justify-content: center;
+    color: green;
+}
