@@ -62,29 +62,26 @@ class User extends Database
         }
 
         if (!preg_match('@[A-Z]@', $this->password)) {
-            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least 1 Capital Letter!");
+            Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least 1 Capital Letter!");
             exit;
         }
 
         if (!preg_match('@[a-z]@', $this->password)) {
-            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least 1 Lowercase Letter!");
+            Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least 1 Lowercase Letter!");
             exit;
         }
 
         if (!preg_match('@[0-9]@', $this->password)) {
-            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least A Number!");
+            Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least A Number!");
             exit;
         }
 
+        Fun::redirect("../../View/User/signup.php", "err", "Saved Successfully!");
 
-<<<<<<< HEAD
-        Fun::redirect("../../View/User/signup.php", "msg", "Saved Successfully!");
-=======
         // if(!preg_match("#[a-z]+#",$password)) {
         //     $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
         // }
         Fun::redirect("../../View/User/signup.php", "succ", "Saved Successfully!");
->>>>>>> 153084f43119d2a01e1ff546e2a96790e3f6f684
     }
 
     public function processUser($name, $email, $password)
