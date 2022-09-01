@@ -5,7 +5,7 @@ class User extends Database
     public $name;
     public $email;
     public $password;
-    public $table = "user";
+    public $table = "signup";
     public $result;
 
     public function userInfo($condition = "", $field = "*", $column = "")
@@ -39,22 +39,22 @@ class User extends Database
     public function validateUser()
     {
         if (Fun::checkEmptyInput([$this->name, $this->email, $this->password])) {
-            Fun::redirect("../../View/User/signup.php", "msg", "None of the fields must be empty!");
+            Fun::redirect("../../View/User/signup.php", "err", "None of the fields must be empty!");
             exit;
         }
 
         if (is_numeric($this->name) || is_numeric($this->email)) {
-            Fun::redirect("../../View/User/signup.php", "msg", "Name or email must be in text only!");
+            Fun::redirect("../../View/User/signup.php", "err", "Name or email must be in text only!");
             exit;
         }
 
         if (($this->isExists("name = '$this->name'")) && ($this->isExists("email = '$this->email'"))) {
-            Fun::redirect("../../View/User/signup.php", "msg", "This name or email already exists!");
+            Fun::redirect("../../View/User/signup.php", "err", "This name or email already exists!");
             exit;
         }
 
         if (strlen($this->password) < 8) {
-            Fun::redirect("../../View/User/signup.php", "msg", "Your Password Must Contain At Least 8 Characters!");
+            Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least 8 Characters!");
             exit;
         }
 
@@ -69,7 +69,7 @@ class User extends Database
         // if(!preg_match("#[a-z]+#",$password)) {
         //     $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
         // }
-        Fun::redirect("../../View/User/signup.php", "msg", "Saved Successfully!");
+        Fun::redirect("../../View/User/signup.php", "succ", "Saved Successfully!");
     }
 
     public function processUser($name, $email, $password)
