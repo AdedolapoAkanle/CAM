@@ -38,8 +38,6 @@ class User extends Database
 
     public function validateUser()
     {
-        // $specialChars = preg_match('@[^\w]@', $this->password);
-
 
         if (Fun::checkEmptyInput([$this->name, $this->email, $this->password])) {
             Fun::redirect("../../View/User/signup.php", "err", "None of the fields must be empty!");
@@ -75,8 +73,6 @@ class User extends Database
             Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least A Number!");
             exit;
         }
-
-
 
         Fun::redirect("../../View/User/signup.php", "succ", "Saved Successfully!");
     }
