@@ -76,11 +76,8 @@ class User extends Database
             exit;
         }
 
-        Fun::redirect("../../View/User/signup.php", "err", "Saved Successfully!");
 
-        // if(!preg_match("#[a-z]+#",$password)) {
-        //     $passwordErr = "Your Password Must Contain At Least 1 Lowercase Letter!";
-        // }
+
         Fun::redirect("../../View/User/signup.php", "succ", "Saved Successfully!");
     }
 
