@@ -88,7 +88,7 @@ input:focus {
     margin-top: 20px;
 }
 
-.cta .login-btn {
+.cta .signin-btn {
     width: 20%;
     height: 30px;
     background-color: #007cb9;
@@ -97,11 +97,11 @@ input:focus {
     color: #fff;
 }
 
-.login-btn:hover {
+.signin-btn:hover {
     cursor: pointer;
 }
 
-.login-link:hover {
+.signin-link:hover {
     cursor: pointer;
 }
 
