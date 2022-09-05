@@ -1,6 +1,6 @@
 <?php
 
-class User extends Database
+class Users extends Database
 {
     public $name;
     public $email;
@@ -74,7 +74,7 @@ class User extends Database
             exit;
         }
 
-        Fun::redirect("../../View/User/signup.php", "succ", "Saved Successfully!");
+        Fun::redirect("../../View/User/signin.php", "succ", "Saved Successfully!");
     }
 
     public function processUser($name, $email, $password)
