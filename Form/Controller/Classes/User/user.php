@@ -5,7 +5,7 @@ class User extends Database
     public $name;
     public $email;
     public $password;
-    public $table = "user";
+    public $table = "signup";
     public $result;
 
     public function userInfo($condition = "", $field = "*", $column = "")
@@ -77,14 +77,12 @@ class User extends Database
         $this->name = $this->escape($name);
         $this->email = $this->escape($email);
         $this->password = $this->escape(($password));
-
         $this->validateUser();
         $this->saveUser();
     }
 
     public function saveUser()
     {
-
         $this->save($this->table, "name = '$this->name', email = '$this->email', password = '$this->password'");
     }
 }

@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="cta">
-                    <button class="login-btn" id="login-btn" name="login-btn" onclick="">Login</button>
+                    <button class="signin-btn" id="signin-btn" name="signin-btn" onclick="">Login</button>
                     <!-- <div class="spinner-border text-primary" id="load"></div> -->
                     <p class="register">Don't have an account yet? <a href="../User/signup.php"
                             class="register_link">Signup</a></p>

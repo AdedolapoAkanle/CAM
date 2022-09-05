@@ -1,3 +1,17 @@
+<?php 
+require("../../Model/Backend/backend.php");
+
+
+if (isset($_GET['err'])) {
+    $msg =  $_GET['err'];
+    $class = 'error_msg';
+} elseif (isset($_GET['succ'])) {
+    $msg =  $_GET['succ'];
+    $class = 'success_msg';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,11 +51,20 @@
     <div class="Container">
         <div class="box">
             <form action='' method='post' id="myform">
-                <div id="load"></div>
+               
                 <div class="header">
                     <h1>Login</h1>
                     <p>Access to our dashboard</p>
                 </div>
+                <span class="error_msg">
+					<?php
+
+					if (isset($_GET['msg'])) {
+						echo $msg;
+					}
+
+					?>
+				</span>
                 <div class="main-form">
                     <div class="input-field">
                         <label for="email" class="label">Email</label>

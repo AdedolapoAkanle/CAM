@@ -1,6 +1,15 @@
 <?php
-if (isset($_GET['msg']))
-	$msg =  $_GET['msg'];
+require("../../Model/Backend/backend.php");
+
+
+if (isset($_GET['err'])) {
+    $msg =  $_GET['err'];
+    $class = 'error_msg';
+} elseif (isset($_GET['succ'])) {
+    $msg =  $_GET['succ'];
+    $class = 'success_msg';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +87,7 @@ if (isset($_GET['msg']))
 			</form>
 		</div>
 		<div class="image-side">
-			<img src="../img/kids.jpg" alt="kid praying" />
+			<img src="../../img/kids.jpg" alt="kid praying" />
 		</div>
 	</div>
 	<script src="./Register.js"></script>
