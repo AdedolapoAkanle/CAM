@@ -53,10 +53,10 @@ class Users extends Database
             exit;
         }
 
-        if (($this->isExists("name = '$this->name'")) && ($this->isExists("email = '$this->email'"))) {
-            Fun::redirect("../../View/User/signup.php", "err", "This name or email already exists!");
-            exit;
-        }
+        // if (($this->isExists("name = '$this->name'")) && ($this->isExists("email = '$this->email'"))) {
+        //     Fun::redirect("../../View/User/signup.php", "err", "This name or email already exists!");
+        //     exit;
+        // }
 
         if (strlen($this->password) < 8) {
             Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least 8 Characters!");

@@ -4,6 +4,7 @@ class SignIn extends Database
 {
     public $email;
     public $password;
+    // public $pwd = sha1($this->password);
     public $table = "users";
     public $result;
 
@@ -27,31 +28,28 @@ class SignIn extends Database
         }
     }
 
-    public function singleUserInfo($id)
-    {
-        $this->result = $this->userInfo("id = '$id'");
-        $this->email = $this->result['email'];
-        $this->password = $this->result['password'];
-    }
-
     public function validateUserSignIn()
     {
+        $pwd = sha1($this->password);
 
         if (Fun::checkEmptyInput([$this->email, $this->password])) {
             Fun::redirect("../../View/User/signin.php", "err", "None of the fields must be empty!");
             exit;
         }
 
-        if (($this->isExists("email = '$this->email'")) && $this->isExists("password='$this->password'")) {
-            Fun::redirect("../parentRegister.php", "succ", "Login Successful!");
+
+        if (($this->isExists("email = '$this->email'")) && ($this->isExists("password='$pwd'"))) {
+            Fun::redirect("../../View/Register/register.php", "succ", "Login Successful!");
             exit;
         } else {
             Fun::redirect("../../View/User/signin.php", "err", "Incorrect Email Or Password!");
+            exit;
         }
     }
 
     public function processUserSignIn($email, $password)
     {
+
         $this->email = $this->escape($email);
         $this->password = $password;
 
