@@ -4,6 +4,7 @@ use function PHPSTORM_META\registerArgumentsSet;
 
 require('../../../Form/Model/Database/database.php');
 require("../../Controller/Classes/User/user.php");
+require("../../Controller/Classes/User/signin.php");
 require('../../../Form/Controller/Classes/parentRegister.php');
 require('../../Controller/CommonFunction/function.php');
 
@@ -15,9 +16,13 @@ require('../../Controller/CommonFunction/function.php');
 
 
 if (isset($_POST['signup'])) {
-    $user = new User();
+    $user = new Users();
 
     $user->processUser($_POST['name'], $_POST['email'],  $_POST['password']);
-    // Fun::redirect("Form/View/User/signup.php", "success", "Saved successfully!");
-    // exit;
+}
+
+if (isset($_POST['login-btn'])) {
+    $sign = new SignIn();
+
+    $sign->processUserSignIn($_POST['email'],  $_POST['password']);
 }
