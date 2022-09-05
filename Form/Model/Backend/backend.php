@@ -21,7 +21,7 @@ if (isset($_POST['signup'])) {
     $user->processUser($_POST['name'], $_POST['email'],  $_POST['password']);
 }
 
-if (isset($_POST['login-btn'])) {
+if (isset($_POST['signin-btn'])) {
     $sign = new SignIn();
 
     $sign->processUserSignIn($_POST['email'],  $_POST['password']);

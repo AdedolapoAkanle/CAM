@@ -5,11 +5,7 @@ class Users extends Database
     public $name;
     public $email;
     public $password;
-<<<<<<< HEAD
-    public $table = "signup";
-=======
     public $table = "users";
->>>>>>> c162afd8f47cd9729bf16ccb78b5022c337a89a7
     public $result;
 
     public function userInfo($condition = "", $field = "*", $column = "")
@@ -85,23 +81,16 @@ class Users extends Database
     {
         $this->name = $this->escape($name);
         $this->email = $this->escape($email);
-<<<<<<< HEAD
-        $this->password = $this->escape(($password));
-=======
         $this->password = $password;
 
->>>>>>> c162afd8f47cd9729bf16ccb78b5022c337a89a7
         $this->validateUser();
         $this->saveUser();
     }
 
     public function saveUser()
     {
-<<<<<<< HEAD
-        $this->save($this->table, "name = '$this->name', email = '$this->email', password = '$this->password'");
-=======
+
         $pwd = sha1($this->password);
         $this->save($this->table, "name = '$this->name', email = '$this->email', password = '$pwd'");
->>>>>>> c162afd8f47cd9729bf16ccb78b5022c337a89a7
     }
 }

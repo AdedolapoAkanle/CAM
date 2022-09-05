@@ -56,12 +56,12 @@ if (isset($_GET['err'])) {
                 <span class="error_msg">
                     <?php
 
-					if (isset($_GET['msg'])) {
-						echo $msg;
-					}
+                    if (isset($_GET['msg'])) {
+                        echo $msg;
+                    }
 
-					?>
-<<<<<<< HEAD
+                    ?>
+
                 </span>
                 <div class="main-form">
 
@@ -96,42 +96,6 @@ if (isset($_GET['err'])) {
         </div>
     </div>
     <script src="./Register.js"></script>
-=======
-				</span>
-				<div class="main-form">
-					
-					<div class="input-field">
-						<label class="label">First Name</label>
-						<input type="text" placeholder="Enter first name" name="first_name" />
-					</div>
-					<div class="input-field">
-						<label class="label">Surname</label>
-						<input type="text" placeholder="Enter surname" name="surname" />
-					</div>
-					<div class="input-field">
-						<label class="label">Email</label>
-						<input type="email" placeholder="Enter email address" name="email" />
-					</div>
-					<div class="input-field">
-						<label class="label">Password</label>
-						<input type="password" placeholder="Enter password" name="password" />
-					</div>
-				</div>
-				<div class="cta">
-					<button class="register-btn">Register</button>
-					<p class="register">
-						Already have account?
-						<a href="../Login/login.html" class="login-link">Login</a>
-					</p>
-				</div>
-			</form>
-		</div>
-		<div class="image-side">
-			<img src="../../img/kids.jpg" alt="kid praying" />
-		</div>
-	</div>
-	<script src="./Register.js"></script>
->>>>>>> 82fb2b4c957d45d38e92921c8988aee1c3451611
 </body>
 
 </html>
