@@ -1,3 +1,17 @@
+<?php
+require("../../Model/Backend/backend.php");
+
+
+if (isset($_GET['err'])) {
+    $msg =  $_GET['err'];
+    $class = 'error_msg';
+} elseif (isset($_GET['succ'])) {
+    $msg =  $_GET['succ'];
+    $class = 'success_msg';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +20,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Style/signin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
-        integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
-        integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
 
 
@@ -42,6 +52,16 @@
                     <h1>Login</h1>
                     <p>Access to our dashboard</p>
                 </div>
+                <span class="<?php echo $class ?>">
+
+                    <?php
+                    if (isset($msg)) {
+                        echo $msg;
+                    }
+                    ?>
+
+                </span>
+
                 <div class="main-form">
                     <div class="input-field">
                         <label for="email" class="label">Email</label>
@@ -60,8 +80,7 @@
                 <div class="cta">
                     <button class="signin-btn" id="signin-btn" name="signin-btn" onclick="">Login</button>
                     <!-- <div class="spinner-border text-primary" id="load"></div> -->
-                    <p class="register">Don't have an account yet? <a href="../User/signup.php"
-                            class="register_link">Signup</a></p>
+                    <p class="register">Don't have an account yet? <a href="../User/signup.php" class="register_link">Signup</a></p>
                 </div>
                 <div class="result">
 
