@@ -51,7 +51,7 @@ form {
 
 
 .input-field {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -66,7 +66,14 @@ input {
     border-bottom: 1px solid #413EF7;
     color: #232425;
 }
-
+select{
+    margin: 5px 0;
+    height: 30px;
+    border: none;
+    background-color: #f9f9fc;
+    border-bottom: 1px solid #413EF7;
+    color: #232425;
+}
 input:focus {
     outline: none;
     border-bottom: 2px solid #007cb9;
@@ -119,4 +126,9 @@ input:focus {
     display: flex;
     justify-content: center;
     color: red;
+}
+.success_msg{
+    display: flex;
+    justify-content: center;
+    color: green;
 }

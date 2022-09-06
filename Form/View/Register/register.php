@@ -19,12 +19,8 @@ if (isset($_GET['err'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="register.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
-        integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
-        integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet" />
 
 
@@ -64,22 +60,33 @@ if (isset($_GET['err'])) {
 
                 </span>
                 <div class="main-form">
-
                     <div class="input-field">
-                        <label class="label">First Name</label>
-                        <input type="text" placeholder="Enter first name" name="first_name" />
+                        <label class="label" for="">Title</label>
+                        <select class='dropdown' name="title" id="title">
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Mr&Mrs">Mr&Mrs</option>
+                        </select>
                     </div>
                     <div class="input-field">
-                        <label class="label">Surname</label>
-                        <input type="text" placeholder="Enter surname" name="surname" />
+                        <label class="label">Full Name</label>
+                        <input type="text" placeholder="Enter full name" name="full_name" />
+                    </div>
+                    <div class="input-field">
+                        <label class="label">Main phone</label>
+                        <input type="text" placeholder="Enter main phone" name="main_phone" />
+                    </div>
+                    <div class="input-field">
+                        <label class="label">Alternative phone</label>
+                        <input type="phone" placeholder="Enter alternative phone" name="alt_phone" />
                     </div>
                     <div class="input-field">
                         <label class="label">Email</label>
                         <input type="email" placeholder="Enter email address" name="email" />
                     </div>
                     <div class="input-field">
-                        <label class="label">Password</label>
-                        <input type="password" placeholder="Enter password" name="password" />
+                        <label class="label">Home address</label>
+                        <input type="address" placeholder="Enter address" name="home_address" />
                     </div>
                 </div>
                 <div class="cta">
