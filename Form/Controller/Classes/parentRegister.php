@@ -32,27 +32,28 @@ class ParentRegister extends Database
 
     public function validation()
     {
+        // require("");
         if (Fun::checkEmptyInput([$this->surname, $this->first_name, $this->email, $this->password])) {
-            Fun::redirect('../../Register/register.php', 'msg', 'none of this field must be empty');
+            Fun::redirect("register.php", 'err', 'None Of This Field Must Be Empty!');
             exit;
         }
         if ($this->isExist("surname =  '$this->surname'")) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Surname already exist');
+            Fun::redirect('../../Register/register.php', 'err', 'Surname Already Exist!');
             exit;
         }
         if ($this->isExist("email =  '$this->email'")) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Email already exist');
+            Fun::redirect('../../Register/register.php', 'err', 'Email Already Exist!');
             exit;
         }
         if (is_numeric($this->first_name)) {
-            Fun::redirect('../../Register/register.php', 'msg', 'First name must not be numeric');
+            Fun::redirect('../../Register/register.php', 'err', 'First Name Must Not Be Numeric!');
             exit;
         }
         if (is_numeric($this->surname)) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Surname must not be numeric');
+            Fun::redirect('../../Register/register.php', 'err', 'Surname Must Not Be Numeric!');
             exit;
         }
-        Fun::redirect('../../Register/register.php', 'msg', 'Submission Successful');
+        Fun::redirect('../../Register/register.php', 'succ', 'Submission Successful!');
     }
     public function processParent($surname, $first_name, $email, $password)
     {
