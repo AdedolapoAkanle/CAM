@@ -84,10 +84,10 @@ if (isset($_GET['err'])) {
                 </div>
                 <div class="cta">
                     <button class="register-btn">Register</button>
-                    <p class="register">
+                    <!-- <p class="register">
                         Already have account?
-                        <a href="../Login/login.html" class="login-link">Login</a>
-                    </p>
+                        <a href="../Login/login.php" class="login-link">Login</a>
+                    </p> -->
                 </div>
             </form>
         </div>
