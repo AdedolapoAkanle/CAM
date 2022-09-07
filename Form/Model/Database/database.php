@@ -129,6 +129,8 @@ class Database
                         return $rlt[0][$column];
                     }
                 } else {
+                    $_SESSION['id'] = $rlt[0]['id'];
+
                     return $rlt;
                 }
             }

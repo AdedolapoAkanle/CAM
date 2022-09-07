@@ -10,6 +10,12 @@ if (isset($_GET['err'])) {
     $class = 'success_msg';
 }
 
+// $id = isset($_SESSION['id']) ? $_SESSION['id'] : "";
+
+if (!isset($_SESSION['id'])) {
+    // Fun::redirect("../Login/login.php", "err", "Suspicious Activities!");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +53,7 @@ if (isset($_GET['err'])) {
 <body>
     <div class="Container">
         <div class="box">
-            <?php ?>
+
             <form method='post' action="../../Model/Backend/backend.php">
                 <div class="header">
 
@@ -56,15 +62,9 @@ if (isset($_GET['err'])) {
                 </div>
                 <span class="error_msg">
                     <?php
-
-                    if (isset($_GET['err'])) {
-                        $msg =  $_GET['err'];
-                        $class = 'error_msg';
-                    } elseif (isset($_GET['succ'])) {
-                        $msg =  $_GET['succ'];
-                        $class = 'success_msg';
+                    if (isset($_GET['msg'])) {
+                        echo $msg;
                     }
-
                     ?>
 
                 </span>

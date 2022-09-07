@@ -38,6 +38,8 @@ class SignIn extends Database
 
 
         if (($this->isExists("email = '$this->email'")) && ($this->isExists("password='$pwd'"))) {
+
+            $this->lookUp($this->table, "*", "email='$this->email'");
             Fun::redirect("../../View/Register/register.php", "succ", "Login Successful!");
             exit;
         } else {

@@ -2,6 +2,7 @@
 
 use function PHPSTORM_META\registerArgumentsSet;
 
+session_start();
 require('../../../Form/Model/Database/database.php');
 require("../../Controller/Classes/User/user.php");
 require("../../Controller/Classes/User/signin.php");
