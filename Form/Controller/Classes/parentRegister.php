@@ -1,22 +1,24 @@
 <?php
 class ParentRegister extends Database
 {
-    public $surname;
-    public $first_name;
+    public $title;
+    public $full_name;
+    public $main_phone;
+    public $alt_phone;
     public $email;
-    public $password;
+    public $home_address;
 
 
-    public $parentTable = "register_parent";
+    public $table = "parent_register";
 
     public function parentInfo($condition = "", $field = "*", $column = "")
     {
-        $this->lookUp($this->parentTable, $field, $condition, $column);
+        $this->lookUp($this->table, $field, $condition, $column);
     }
 
     public function countParentRow($condition)
     {
-        return $this->countRows($this->parentTable, "*", $condition);
+        return $this->countRows($this->table, "*", $condition);
     }
 
     public function isExist($condition)
@@ -30,43 +32,55 @@ class ParentRegister extends Database
     }
 
 
-    public function validation()
+    public function validateParent()
     {
-        if (Fun::checkEmptyInput([$this->surname, $this->first_name, $this->email, $this->password])) {
-            Fun::redirect('../../Register/register.php', 'msg', 'none of this field must be empty');
-            exit;
-        }
-        if ($this->isExist("surname =  '$this->surname'")) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Surname already exist');
-            exit;
-        }
-        if ($this->isExist("email =  '$this->email'")) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Email already exist');
-            exit;
-        }
-        if (is_numeric($this->first_name)) {
-            Fun::redirect('../../Register/register.php', 'msg', 'First name must not be numeric');
-            exit;
-        }
-        if (is_numeric($this->surname)) {
-            Fun::redirect('../../Register/register.php', 'msg', 'Surname must not be numeric');
-            exit;
-        }
-        Fun::redirect('../../Register/register.php', 'msg', 'Submission Successful');
-    }
-    public function processParent($surname, $first_name, $email, $password)
-    {
-        $this->surname = $surname;
-        $this->first_name = $first_name;
-        $this->email = $email;
-        $this->password = $password;
-        $this->validation();
 
+        if (Fun::checkEmptyInput([$this->title, $this->full_name, $this->main_phone, $this->alt_phone, $this->email, $this->home_address])) {
+            Fun::redirect("../../View/Register/register.php", 'err', 'None Of The Fields Must Be Empty!');
+            exit;
+        }
+
+        if (($this->isExist("full_name =  '$this->full_name'")) && ($this->isExist("email =  '$this->email'"))) {
+            require("../../View/Register/register.php");
+            Fun::redirect("../../View/Register/register.php", 'err', 'This Parent Already Exists!');
+            exit;
+        }
+
+        if (is_numeric($this->full_name)) {
+            Fun::redirect('../../View/Register/register.php', 'err', 'Full Name Must Not Be Numeric!');
+            exit;
+        }
+        if ((!is_numeric($this->main_phone)) || (!is_numeric($this->alt_phone))) {
+            Fun::redirect('../../View/Register/register.php', 'err', 'Phone Number Must Be Numbers Only!');
+            exit;
+        }
+
+        if ((strlen($this->main_phone) !== 11)) {
+            Fun::redirect('../../View/Register/register.php', 'err', 'Phone Number Must Be 11 Digits!');
+            exit;
+        }
+
+        if ((strlen($this->alt_phone) !== 11)) {
+            Fun::redirect('../../View/Register/register.php', 'err', 'Phone Number Must Be 11 Digits!');
+            exit;
+        }
+        Fun::redirect("../../View/Register/register.php", 'succ', 'Registration Successful!');
+    }
+    public function processParent($title, $full_name, $main_phone, $alt_phone, $email, $home_address)
+    {
+        $this->title = $title;
+        $this->full_name = $full_name;
+        $this->main_phone = $main_phone;
+        $this->alt_phone = $alt_phone;
+        $this->email = $email;
+        $this->home_address = $home_address;
+
+        $this->validateParent();
         $this->saveParentInfo();
     }
 
     public function saveParentInfo()
     {
-        $this->save($this->parentTable, "surname = '$this->surname', first_name = '$this->first_name', email = '$this->email', password = '$this->password'");
+        $this->save($this->table, "title = '$this->title', full_name = '$this->full_name', main_phone = '$this->main_phone', alt_phone = '$this->alt_phone', email = '$this->email', home_address = '$this->home_address'");
     }
 }
