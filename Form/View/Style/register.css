@@ -74,6 +74,13 @@ select{
     border-bottom: 1px solid #413EF7;
     color: #232425;
 }
+
+select:focus{
+    outline: none;
+}
+select:hover{
+    cursor: pointer;
+}
 input:focus {
     outline: none;
     border-bottom: 2px solid #007cb9;
