@@ -55,12 +55,12 @@ class ParentRegister extends Database
             exit;
         }
 
-        if (($this->main_phone !== 11)) {
+        if ((strlen($this->main_phone) !== 11)) {
             Fun::redirect('../../View/Register/register.php', 'err', 'Phone Number Must Be 11 Digits!');
             exit;
         }
 
-        if (($this->alt_phone !== 11)) {
+        if ((strlen($this->alt_phone) !== 11)) {
             Fun::redirect('../../View/Register/register.php', 'err', 'Phone Number Must Be 11 Digits!');
             exit;
         }
@@ -74,8 +74,8 @@ class ParentRegister extends Database
         $this->alt_phone = $alt_phone;
         $this->email = $email;
         $this->home_address = $home_address;
-        $this->validateParent();
 
+        $this->validateParent();
         $this->saveParentInfo();
     }
 

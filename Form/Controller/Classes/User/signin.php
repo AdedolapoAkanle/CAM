@@ -4,7 +4,6 @@ class SignIn extends Database
 {
     public $email;
     public $password;
-    // public $pwd = sha1($this->password);
     public $table = "users";
     public $result;
 

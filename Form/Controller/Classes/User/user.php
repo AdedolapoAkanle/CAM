@@ -44,15 +44,15 @@ class Users extends Database
             exit;
         }
 
-        if (is_numeric($this->name) || is_numeric($this->email)) {
-            Fun::redirect("../../View/User/signup.php", "err", "Name or email must be in text only!");
+        if (is_numeric($this->name)) {
+            Fun::redirect("../../View/User/signup.php", "err", "Name must be in text only!");
             exit;
         }
 
-        // if (($this->isExists("name = '$this->name'")) && ($this->isExists("email = '$this->email'"))) {
-        //     Fun::redirect("../../View/User/signup.php", "err", "This name or email already exists!");
-        //     exit;
-        // }
+        if (($this->isExists("name = '$this->name'")) && ($this->isExists("email = '$this->email'"))) {
+            Fun::redirect("../../View/User/signup.php", "err", "This name or email already exists!");
+            exit;
+        }
 
         if (strlen($this->password) < 8) {
             Fun::redirect("../../View/User/signup.php", "err", "Your Password Must Contain At Least 8 Characters!");
