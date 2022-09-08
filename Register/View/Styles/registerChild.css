@@ -126,7 +126,7 @@ body {
 
 .input {
 
-    margin: 7px 0;
+    /* margin: 7px 0; */
     height: 30px;
     padding: 10px 5px;
     border: none;
@@ -160,9 +160,6 @@ body {
     color: #fff;
 }
 
-.right-form {
-    /* margin-top: 30px; */
-}
 
 .header {
     text-align: left;

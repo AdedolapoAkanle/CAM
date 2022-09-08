@@ -65,10 +65,20 @@ if (!isset($_SESSION['id'])) {
 
 
                     <div class="left_form">
+
                         <div class="input-field">
-                            <label class="label">Full Name</label>
-                            <input class="input" type="name" name="full_name">
+                            <label class="label">Parent Phone Number</label>
+                            <!-- <input class="input" type="number" name="phone"> -->
+                            <!-- <input type="text" name="phone" class="text-input" /> -->
+                            <?php
+                            $db = new Database;
+
+                            Fun::dynamicDropdown("parent_id", "parent_register", "full_name", "Parent", "", "id", "input");
+
+                            ?>
                         </div>
+
+
                         <div class="input-field">
                             <label class="label">Date Of Birth</label>
                             <input class="input" type="date" name="dob">
@@ -86,17 +96,9 @@ if (!isset($_SESSION['id'])) {
 
                     </div>
                     <div class="right_form">
-
                         <div class="input-field">
-                            <label class="label">Parent Phone Number</label>
-                            <!-- <input class="input" type="number" name="phone"> -->
-                            <!-- <input type="text" name="phone" class="text-input" /> -->
-                            <?php
-                            $db = new Database;
-
-                            Fun::dynamicDropdown("parent_id", "parent_register", "full_name", "Parent", "", "id", "input");
-
-                            ?>
+                            <label class="label">Full Name</label>
+                            <input class="input" type="name" name="full_name">
                         </div>
 
 
