@@ -2,7 +2,7 @@
 class ChildRegister extends Database
 {
     public $full_name;
-    public $phone;
+    public $parent_id;
     public $address;
     public $dob;
     public $gender;
@@ -32,7 +32,7 @@ class ChildRegister extends Database
     public function validateChild()
     {
 
-        if (Fun::checkEmptyInput([$this->full_name, $this->phone, $this->address, $this->dob, $this->gender])) {
+        if (Fun::checkEmptyInput([$this->full_name, $this->parent_id, $this->address, $this->dob, $this->gender])) {
             Fun::redirect("../../View/Child_Register/child.php", 'err', 'None Of The Fields Must Be Empty!');
             exit;
         }
@@ -46,22 +46,22 @@ class ChildRegister extends Database
             Fun::redirect('../../View/Child_Register/child.php', 'err', 'Full Name Must Not Be Numeric!');
             exit;
         }
-        if (!is_numeric($this->phone)) {
-            Fun::redirect('../../View/Child_Register/child.php', 'err', 'Phone Number Must Be Numbers Only!');
+        if (!is_numeric($this->parent_id)) {
+            Fun::redirect('../../View/Child_Register/child.php', 'err', 'Parent_id Number Must Be Numbers Only!');
             exit;
         }
 
-        if ((strlen($this->phone) !== 11)) {
-            Fun::redirect('../../View/Child_Register/child.php', 'err', 'Phone Number Must Be 11 Digits!');
+        if ((strlen($this->parent_id) !== 11)) {
+            Fun::redirect('../../View/Child_Register/child.php', 'err', 'Parent_id Number Must Be 11 Digits!');
             exit;
         }
 
         Fun::redirect("../../View/Child_Register/child.php", 'succ', 'Registered Successfully!');
     }
-    public function processChild($full_name, $phone, $address, $dob, $gender)
+    public function processChild($full_name, $parent_id, $address, $dob, $gender)
     {
         $this->full_name = $full_name;
-        $this->phone = $phone;
+        $this->parent_id = $parent_id;
         $this->address = $address;
         $this->dob = $dob;
         $this->gender = $gender;

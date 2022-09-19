@@ -6,6 +6,7 @@
     font-size: 16px;
 }
 
+
 .Container {
     display: flex;
     justify-content: space-between;
@@ -62,7 +63,7 @@ input {
     padding: 10px 5px;
     
     border: none;
-    background-color: #f9f9fc;
+    /* background-color: #f9f9fc; */
     border-bottom: 1px solid #413EF7;
     color: #232425;
 }
@@ -90,6 +91,7 @@ input:focus {
 }
 .register_btn:hover{
     cursor: pointer;
+    background-color: #0092ca;
 }
 .register-link:hover{
     cursor: pointer;

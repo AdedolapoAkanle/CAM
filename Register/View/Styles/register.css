@@ -62,7 +62,7 @@ form {
     height: 30px;
     padding: 10px 5px;
     border: none;
-    background-color: #f9f9fc;
+    /* background-color: #f9f9fc; */
     border-bottom: 1px solid #413EF7;
     color: #232425;
 }

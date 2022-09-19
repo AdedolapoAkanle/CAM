@@ -50,7 +50,7 @@ class Users extends Database
         }
 
         if ($this->isExists("email = '$this->email'")) {
-            Fun::redirect("../../View/User/register.php", "err", "This Email Already Exists!");
+            Fun::redirect("../../View/User/register.php", "err", "This User Already Exists!");
             exit;
         }
 
@@ -74,7 +74,7 @@ class Users extends Database
             exit;
         }
         // require("../../../View/User/login.php")
-        Fun::redirect("../../View/User/login.php", "succ", "Saved Successfully!");
+        Fun::redirect("../../View/User/login.php", "succ", "Registered Successfully!");
     }
 
     public function processUser($name, $email, $password)
